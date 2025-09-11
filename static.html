@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>绯月宗身份卡生成器</title>
+  <!-- 引入TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 引入字体 -->
+  <link href="https://cdn.jsdelivr.net/npm/maoken-fonts@1.0.0/fonts/MaokenAssortedSans/MaokenAssortedSans.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    /* --- 字体定义 --- */
+    /* Ma Shan Zheng */
+    @font-face {
+      font-family: 'Ma Shan Zheng'; font-style: normal; font-weight: 400; font-display: swap;
+      src: url(https://fonts.gstatic.com/s/mashanzheng/v14/NaPecZTRCLxvwo41b4sjgJzYAp_b22Lk.woff2) format('woff2');
+      unicode-range: U+1F00-1FFF, U+2E80-2EFF, U+3000-303F, U+3200-32FF, U+3300-33FF, U+4E00-9FFF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF;
+    }
+    /* Noto Serif SC */
+    @font-face {
+      font-family: 'Noto Serif SC'; font-style: normal; font-weight: 400; font-display: swap;
+      src: url(https://fonts.gstatic.com/s/notoserifsc/v23/H4chBXePl9DZ0Xe7gG9IXw3I-SzeplQPTb3y.woff2) format('woff2');
+      unicode-range: U+4E00-9FFF, U+3000-303F, U+FF00-FFEF, U+2E80-2EFF, U+3200-32FF, U+3300-33FF, U+F900-FAFF, U+FE30-FE4F;
+    }
+    /* ZCOOL KuaiLe */
+    @font-face {
+      font-family: 'ZCOOL KuaiLe'; font-style: normal; font-weight: 400; font-display: swap;
+      src: url(https://fonts.gstatic.com/s/zcoolkuaile/v15/AFTp_zraKjJAoG8HDs-BnaStd-lD4g.woff2) format('woff2');
+      unicode-range: U+1F00-1FFF, U+2E80-2EFF, U+3000-303F, U+3200-32FF, U+3300-33FF, U+4E00-9FFF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF;
+    }
+    /* Zhi Mang Xing */
+    @font-face {
+      font-family: 'Zhi Mang Xing'; font-style: normal; font-weight: 400; font-display: swap;
+      src: url(https://fonts.gstatic.com/s/zhimangxing/v16/buk2XBAtrE3G104Ab3b4-A9a-5yb-A.woff2) format('woff2');
+      unicode-range: U+1F00-1FFF, U+2E80-2EFF, U+3000-303F, U+3200-32FF, U+3300-33FF, U+4E00-9FFF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF;
+    }
+
+    /* --- 新字体 --- */
+    /* ZCOOL XiaoWei */
+    @font-face {
+      font-family: 'ZCOOL XiaoWei'; font-style: normal; font-weight: 400; font-display: swap;
+      src: url(https://fonts.gstatic.com/s/zcoolxiaowei/v10/i7dMIFFrTRywYeRi-mI_ApQDBA-s-A.woff2) format('woff2');
+      unicode-range: U+4E00-9FFF;
+    }
+    /* Long Cang */
+    @font-face {
+      font-family: 'Long Cang'; font-style: normal; font-weight: 400; font-display: swap;
+      src: url(https://fonts.gstatic.com/s/longcang/v15/2sD6A5cs-A6U2D86jo-QkC8.woff2) format('woff2');
+      unicode-range: U+4E00-9FFF, U+3000-303F, U+FF00-FFEF;
+    }
+    /* ZCOOL QingKe HuangYou */
+    @font-face {
+      font-family: 'ZCOOL QingKe HuangYou'; font-style: normal; font-weight: 400; font-display: swap;
+      src: url(https://fonts.gstatic.com/s/zcoolqingkehuangyou/v11/2Eb5L_R5flZ_XXX2_d7f9y22s8cWn-3w-Q.woff2) format('woff2');
+      unicode-range: U+4E00-9FFF, U+2E80-2EFF, U+3000-303F, U+3200-32FF, U+3300-33FF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF;
+    }
+    /* Liu Jian Mao Cao */
+    @font-face {
+      font-family: 'Liu Jian Mao Cao'; font-style: normal; font-weight: 400; font-display: swap;
+      src: url(https://fonts.gstatic.com/s/liujianmaocao/v15/-nFnOHM29-NCsPdVXn72cAXs82A_t58y.woff2) format('woff2');
+      unicode-range: U+4E00-9FFF, U+3000-303F, U+FF00-FFEF;
+    }
+    
+    body {
+      background-color: #1a1a1a;
+      background-image: radial-gradient(circle at top right, rgba(153, 27, 27, 0.3), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(107, 33, 168, 0.2), transparent 50%);
+    }
+
+    /* --- 字体工具类 --- */
+    .font-mashan { font-family: 'Ma Shan Zheng', cursive; }
+    .font-noto-serif { font-family: 'Noto Serif SC', serif; }
+    .font-zcool { font-family: 'ZCOOL KuaiLe', cursive; }
+    .font-zhimang { font-family: 'Zhi Mang Xing', cursive; }
+    /* 新类 */
+    .font-xiaowei { font-family: 'ZCOOL XiaoWei', serif; }
+    .font-longcang { font-family: 'Long Cang', cursive; }
+    .font-huangyou { font-family: 'ZCOOL QingKe HuangYou', cursive; }
+    .font-liujian { font-family: 'Liu Jian Mao Cao', cursive; }
+    .font-maoken { font-family: 'MaokenAssortedSans', sans-serif; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
+</head>
+<body class="min-h-screen">
+  <div id="content" class="container mx-auto p-4 text-white">
+    <h1 class="text-4xl font-mashan text-center my-8 text-red-500">绯月宗身份卡生成器</h1>
+    
+    <div class="max-w-md mx-auto bg-gray-800 rounded-lg p-6 shadow-lg">
+      <p class="font-noto-serif mb-4">这是一个简化版的静态页面。要使用完整功能的绯月宗身份卡生成器，请按照以下步骤操作：</p>
+      
+      <ol class="list-decimal pl-6 space-y-2 font-xiaowei">
+        <li>打开命令提示符或终端</li>
+        <li>进入项目文件夹</li>
+        <li>运行 <code class="bg-gray-700 px-2 py-1 rounded">npm run dev</code></li>
+        <li>在浏览器中访问 <code class="bg-gray-700 px-2 py-1 rounded">http://localhost:5173</code></li>
+      </ol>
+      
+      <div class="mt-6 p-4 bg-gray-700 rounded-lg">
+        <p class="font-huangyou text-yellow-300">提示：React应用需要通过开发服务器运行，无法直接通过双击HTML文件打开。</p>
+      </div>
+    </div>
+    
+    <div class="mt-8 text-center">
+      <p class="font-longcang text-xl text-purple-300">绯月宗 - 修真之路</p>
+    </div>
+  </div>
+</body>
+</html>
