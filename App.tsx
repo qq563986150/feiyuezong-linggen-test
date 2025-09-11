@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import IdentityCard from './components/IdentityCard';
-import SpiritRootModal from '@/components/SpiritRootModal';
+import IdentityCard from '@/components/IdentityCard.tsx';
+import SpiritRootModal from '@/components/SpiritRootModal.tsx';
 
 // Declare the htmlToImage library which is loaded via script tag in index.html
 declare const htmlToImage: any;
