@@ -1,0 +1,5 @@
+{
+  "name": "绯月宗身份卡生成器 (Crimson Moon Sect ID Card Generator)",
+  "description": "一个仙侠风格的身份卡生成器，可以上传照片、输入姓名、性别和入宗日期，生成并保存一张独特的绯月宗弟子身份卡。 (A Xianxia-style identity card generator where you can upload a photo, enter your name, gender, and date of joining to generate and save a unique Crimson Moon Sect disciple identity card.)",
+  "requestFramePermissions": []
+}
