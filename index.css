@@ -1,0 +1,66 @@
+/* --- Local Fonts --- */
+/* Ma Shan Zheng */
+@font-face {
+  font-family: 'Ma Shan Zheng'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('/fonts/MaShanZheng-Regular.ttf') format('truetype');
+  unicode-range: U+1F00-1FFF, U+2E80-2EFF, U+3000-303F, U+3200-32FF, U+3300-33FF, U+4E00-9FFF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF;
+}
+/* Noto Serif SC */
+@font-face {
+  font-family: 'Noto Serif SC'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('/fonts/NotoSerifSC-VariableFont_wght.ttf') format('truetype');
+  unicode-range: U+4E00-9FFF, U+3000-303F, U+FF00-FFEF, U+2E80-2EFF, U+3200-32FF, U+3300-33FF, U+F900-FAFF, U+FE30-FE4F;
+}
+/* ZCOOL KuaiLe */
+@font-face {
+  font-family: 'ZCOOL KuaiLe'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('/fonts/ZCOOLKuaiLe-Regular.ttf') format('truetype');
+  unicode-range: U+1F00-1FFF, U+2E80-2EFF, U+3000-303F, U+3200-32FF, U+3300-33FF, U+4E00-9FFF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF;
+}
+/* Zhi Mang Xing */
+@font-face {
+  font-family: 'Zhi Mang Xing'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('/fonts/ZhiMangXing-Regular.ttf') format('truetype');
+  unicode-range: U+1F00-1FFF, U+2E80-2EFF, U+3000-303F, U+3200-32FF, U+3300-33FF, U+4E00-9FFF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF;
+}
+/* ZCOOL XiaoWei */
+@font-face {
+  font-family: 'ZCOOL XiaoWei'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('/fonts/ZCOOLXiaoWei-Regular.ttf') format('truetype');
+  unicode-range: U+4E00-9FFF;
+}
+/* Long Cang */
+@font-face {
+  font-family: 'Long Cang'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('/fonts/LongCang-Regular.ttf') format('truetype');
+  unicode-range: U+4E00-9FFF, U+3000-303F, U+FF00-FFEF;
+}
+/* ZCOOL QingKe HuangYou */
+@font-face {
+  font-family: 'ZCOOL QingKe HuangYou'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('/fonts/ZCOOLQingKeHuangYou-Regular.ttf') format('truetype');
+  unicode-range: U+4E00-9FFF, U+2E80-2EFF, U+3000-303F, U+3200-32FF, U+3300-33FF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF;
+}
+/* Liu Jian Mao Cao */
+@font-face {
+  font-family: 'Liu Jian Mao Cao'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('/fonts/LiuJianMaoCao-Regular.ttf') format('truetype');
+  unicode-range: U+4E00-9FFF, U+3000-303F, U+FF00-FFEF;
+}
+/* MaokenAssortedSans (假设文件名为 MaoKenShiJinHei-2.ttf) */
+@font-face {
+  font-family: 'MaokenAssortedSans'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('/fonts/MaoKenShiJinHei-2.ttf') format('truetype');
+  unicode-range: U+4E00-9FFF, U+2E80-2EFF, U+3000-303F, U+3200-32FF, U+3300-33FF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF;
+}
+
+/* --- Font Utility Classes (从 index.html 迁移过来) --- */
+.font-mashan { font-family: 'Ma Shan Zheng', cursive; }
+.font-noto-serif { font-family: 'Noto Serif SC', serif; }
+.font-zcool { font-family: 'ZCOOL KuaiLe', cursive; }
+.font-zhimang { font-family: 'Zhi Mang Xing', cursive; }
+.font-xiaowei { font-family: 'ZCOOL XiaoWei', serif; }
+.font-longcang { font-family: 'Long Cang', cursive; }
+.font-huangyou { font-family: 'ZCOOL QingKe HuangYou', cursive; }
+.font-liujian { font-family: 'Liu Jian Mao Cao', cursive; }
+.font-maoken { font-family: 'MaokenAssortedSans', sans-serif; }
